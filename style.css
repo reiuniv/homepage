@@ -1,32 +1,4 @@
-  #picmaisuu {
-    width: 50px;
-  }
-  #picwidth {
-    width: 30px;
-  }
-  
-  #outtext{
-    width: 500px;
-    height:500px;
-  }
-
-.left{
-  float: left;
+p.twicon img{
+  width:200px;
+  height:200px;
 }
-
-.right{
-  float: left;
-}
-
-dt{
-  clear:left;
-  position: relative;
-  float: left;
-  width: 10em;
-  padding:5px 0px 0px 0px;
-  }
- dd{
-  margin-left: 10em;
-  width: 200px;
-  padding: 5px 5px 5px 0px;
-  }
