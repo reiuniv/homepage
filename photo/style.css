@@ -1,3 +1,13 @@
+p.picture {
+  max-width: 700px; /* 最大幅 */
+}
+
+@media screen and (max-width: 500px) {
+  p.picture {
+    display: block;
+  }
+}
+
 p.picture img {
-  width: 500px;  /* 横幅を200pxに */
+  width: 100%; 
 }
