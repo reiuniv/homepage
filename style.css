@@ -30,3 +30,26 @@ p.twicon img{
   margin-top:10px;
 }
 
+@media screen and (max-width: 700px) {
+  body {
+    background-color:#faf5f5;
+  }
+  
+  p.twicon img{
+    width:200px;
+    height:200px;
+  }
+  #left{
+    width: 100%;
+  }
+  
+  #right{
+    width: 100%;
+  }
+  
+  #center{
+    width: 100%;
+  }
+  }
+
+
