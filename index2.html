@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="test.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TeXの画像コード作るマン</title>
+</head>
+<body>
+    <h2>TeXの画像コード生成機</h2>
+    [ファイル名]_[数字(連番)].[画像の拡張子] で設定されます。<br>
+    画像はpicフォルダに保存していることとします。(pic/[画像ファイル])<br>
+    \usepackage{here}<br>
+    \usepackage[dvipdfmx]{graphicx}<br>
+    が必須。
+    <hr>
+    <p>
+        <div class="left">
+    <form id="maisuu">
+        横に並べる画像の枚数
+        <input name="hoge" type="radio" value="single" checked> 1枚
+        <input name="hoge" type="radio" value="double"> 2枚
+    </form><br>
+    <dt>ファイル名</dt>
+    <dd><input type="text" id="picturenonamae" value="pic"></dd>
+    <dt>枚数</dt>
+    <dd><select name="maisuu" id="picmaisuu" value="" onclick="maketextbox()"></select></dd>
+    <script>combobox();</script>
+    <dt>画像の拡張子</dt>
+    <dd><select id="pic" name="kakutyousi">
+        <option>PNG</option>
+        <option>JPEG</option>
+        <option>BMP</option>
+       </select></dd>
+    <dt>width[mm]</dt>
+       <dd><input type="text" id="picwidth" value="150"></dd>
+       </p>
+       <div id="zudai">
+       </div>
+       <script>maketextbox();</script>
+
+    <input type="button" onclick="showradio()" value="出力">
+    <form name="output">
+    <div id="radiobutton">
+    </div>
+    </div>
+    <div class="right">
+    <textarea name="textbox" id="outtext">出力結果</textarea>
+</div>
+    </form>
+</body>
+</html>
