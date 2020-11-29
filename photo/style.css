@@ -10,9 +10,7 @@ p.picture img {
 
 #left{
   width:200px;
-  min-height:500px;
   float:left;
-  height:auto;
   margin-top:10px;
 }
 
