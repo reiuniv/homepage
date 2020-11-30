@@ -28,6 +28,11 @@ p.twicon img{
  }
  aside {
   width: 220px;
+  line-height: 1.5em
+ }
+
+ hr.side{
+  border: 2px double #8c8b8b;
  }
   
  @media screen and (max-width: 480px) {
@@ -42,6 +47,7 @@ p.twicon img{
    margin: 0;
   }
   aside {
+    line-height: 1.5em
    width: 100%;
   }
  }

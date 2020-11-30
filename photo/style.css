@@ -29,6 +29,11 @@ p.picture img {
  }
  aside {
   width: 220px;
+  line-height: 1.5em
+ }
+
+ hr.side{
+  border: 2px double #8c8b8b;
  }
   
  @media screen and (max-width: 480px) {
@@ -44,5 +49,6 @@ p.picture img {
   }
   aside {
    width: 100%;
+   line-height: 1.5em
   }
  }
