@@ -2,6 +2,14 @@ body {
   background-color:#faf5f5;
 }
 
+#top {
+  text-align: center;
+}
+
+p.toppic img {
+  width:75%;
+}
+
 p.twicon img{
   width:200px;
   height:200px;
