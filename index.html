@@ -1,52 +1,129 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="test.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>れだいのホームページ</title>
-    <meta name="description" content="制作物置き場">
-</head>
-<body>
-    
-<header>
-<p class="toppic">
-    <a href="https://reiuniv.github.io/homepage/">
-        <img src="https://reiuniv.github.io/homepage/pic/homepage.png" alt="ホームページ" title="ホームページ">
-    </a>
-</p>
-</header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>れだいのページ</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 
-<div class="wrapper">
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+  <a class="navbar-brand" href="#"><font size="5" >れだいのページ</font></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <!--
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+      -->
+
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">作ったもの</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="#">ニキシー管時計</a>
+          <a class="dropdown-item" href="#">電光掲示板</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">写真置き場</a>
+      </li>
+
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">リンク</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown02">
+          <a class="dropdown-item" href="#">GitHub</a>
+          <a class="dropdown-item" href="#">Twitter</a>
+          <a class="dropdown-item" href="#">ニコニコ動画</a>
+          <a class="dropdown-item" href="#">YouTube</a>
+          <a class="dropdown-item" href="#">Pixiv</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="./oldpage/">OldPage</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">こん＾＾</h1>
+      <p>わたし電子工作好きマン！！！！！</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">プロフィール &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>作ったもの</h2>
+        <p>電子工作、プログラムなど制作物を展示するページ </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>写真置き場</h2>
+        <p>制作物の写真を保管しておくページ </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>リンク集</h2>
+        <p>これいる？</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
 
 
-<main>
-    <h1>トップページ</h1>
-    <h2>自己紹介</h2>
-    <p class="twicon">
-    <img src="pic/twittericon.jpg" alt="アイコン" title="アイコン">
-    </p>
-    れだい TDU 3EC<br>
-    <h2><a href="https://reiuniv.github.io/homepage/seisakubutsu">制作物はこちら</a></h2>
+  </div> <!-- /container -->
+
 </main>
 
-<hr class="side">
-
-<aside>
-        <h4>リンク集</h4>
-        <a href="https://reiuniv.github.io/homepage">トップページ</a><br>
-        <a href="https://reiuniv.github.io/homepage/seisakubutsu">制作物</a>
-        <ul>
-            <li><a href="https://reiuniv.github.io/homepage/photo#nixie">ニキシー管時計</a></li>
-            <li><a href="https://reiuniv.github.io/homepage/photo#denkou">電光掲示板</a></li>
-        </ul>
-        <a href="https://reiuniv.github.io/homepage/photo">写真置き場</a><br>
-        <h4>Twitter</h4>
-        <a class="twitter-timeline" data-lang="ja" data-width="300" data-height="500" data-theme="light" href="https://twitter.com/reiuniv?ref_src=twsrc%5Etfw">Tweets by reiuniv</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</aside>
-
-</div>
-
-</body>
+<footer class="container">
+  <p>うんちぶりぶりブリ大根</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
 </html>
