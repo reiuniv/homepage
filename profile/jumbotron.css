@@ -3,6 +3,7 @@ body {
   padding-top: 3.5rem;
 }
 
+
 .jumbotron{
   background-image:url(./pic/bg.jpg);
   background-size:  cover; 
@@ -26,9 +27,17 @@ body {
     padding-left: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-
-
 }
+
+main h1,.col-md-4 h4{
+  border-left: 3px solid #217ab1;
+  background: #ddf6fa;/*背景色*/
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top:1rem;
+}
+
 
 .midashi .col-md-4{
     background: #f3f1f1;
@@ -42,3 +51,40 @@ body {
 a.btn.btn-secondary{
   margin-top: 0.5rem;
 }
+
+.wrapper {
+  display: flex;
+  max-width: 1600px;
+  min-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+ }
+ main {
+  flex: 1;
+  margin: 0 20px;
+ }
+ aside {
+  width: 220px;
+  line-height: 1.5em
+ }
+
+ hr.side{
+  border: 2px double #8c8b8b;
+ }
+  
+ @media screen and (max-width: 480px) {
+  .wrapper {
+   display: block;
+   margin: 0;
+   padding: 0;
+   max-width: 100%;
+   min-width: initial;
+  }
+  main {
+   margin: 0;
+  }
+  aside {
+    line-height: 1.5em;
+   width: 100%;
+  }
+ }
