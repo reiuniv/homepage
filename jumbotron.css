@@ -4,5 +4,27 @@ body {
 }
 
 .jumbotron{
-  background-image:url(./pic/splash.png);
+  background-image:url(./pic/bg.jpg);
+  background-size:  cover; 
+}
+
+.jumbotron .container{
+  width:30%;
+  margin-left: 10%;
+  border:  solid 1px;
+  background:rgba(255,255,255,0.9);
+}
+
+.sidebar{
+  float:right;
+}
+
+.midashi h2{
+    border-left: 3px solid #217ab1;
+    background: #ddf6fa;/*背景色*/
+    padding: 0.5rem 0;
+}
+
+.col-md-4{
+
 }
