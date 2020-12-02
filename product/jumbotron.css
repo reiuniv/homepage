@@ -9,6 +9,10 @@ body {
   background-size:  cover; 
   background-position: center;
 }
+
+.pc { display: block !important; }
+.sp { display: none !important; }
+
 @media screen and (min-width:1024px) {
 .jumbotron .container{
   width:20vw;
@@ -79,6 +83,11 @@ a.btn.btn-secondary{
  hr.side{
   border: 2px double #8c8b8b;
  }
+
+ @media only screen and (max-width: 750px) {
+  .pc { display: none !important; }
+  .sp { display: block !important; }
+}
   
  @media screen and (max-width: 480px) {
   .wrapper {
@@ -95,4 +104,5 @@ a.btn.btn-secondary{
     line-height: 1.5em;
    width: 100%;
   }
+
  }
