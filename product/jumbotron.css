@@ -13,6 +13,15 @@ body {
 .pc { display: block !important; }
 .sp { display: none !important; }
 
+.product h4{
+  border-left: 3px solid #b13e2170;
+  background: #faf3f2;/*背景色*/
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top:1rem;
+}
+
 @media screen and (min-width:1024px) {
 .jumbotron .container{
   width:20vw;
@@ -43,8 +52,8 @@ main h1,.col-md-4 h4{
 }
 
 main h3{
-  border-left: 3px solid #217ab170;
-  background: #f2f9fa;/*背景色*/
+  border-left: 3px solid #21b15d;
+  background: #e0fadd;/*背景色*/
   padding-left: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
