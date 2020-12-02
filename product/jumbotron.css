@@ -42,7 +42,7 @@ main h1,.col-md-4 h4{
   margin-top:1rem;
 }
 
-main h3,.col-md-4 h4{
+main h3{
   border-left: 3px solid #217ab170;
   background: #f2f9fa;/*背景色*/
   padding-left: 0.5rem;
@@ -84,7 +84,7 @@ a.btn.btn-secondary{
   border: 2px double #8c8b8b;
  }
 
- @media only screen and (max-width: 750px) {
+ @media only screen and (max-width: 480px) {
   .pc { display: none !important; }
   .sp { display: block !important; }
 }
