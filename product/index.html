@@ -96,10 +96,33 @@
   <a style="cursor:pointer;"><h3 id="nixie">リレーデコーダ式ニキシー管時計</h3></a>
 </div>
   <div id="nixie_open" style="display:none;clear:both;">
-
+<p>
    ニキシー管という1960年代ごろまで使われていた数字や記号を表示する部品で時計を作りました。<br>
    リレー10個で構成されるデコーダ回路を8基搭載しています。リレーの総数は80個です。<br>
-   <h4>ニコニコ動画</h4>
+</p>
+
+<div onclick="obj=document.getElementById('nixie_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+  <a style="cursor:pointer;"><h4>写真</h4></a>
+</div>
+  <div id="nixie_open_image" style="display:none;clear:both;">
+
+    <p class="picture">
+     <img src="pic/clock1.jpg" alt="ニキシー管時計1" title="ニキシー管時計1">
+     <img src="pic/clock2.jpg" alt="ニキシー管時計2" title="ニキシー管時計2">
+     <img src="pic/diver1.jpg" alt="ニキシー管時計3" title="ニキシー管時計3">
+     <img src="pic/diver2.jpg" alt="ニキシー管時計4" title="ニキシー管時計4">
+      <img src="pic/pre.jpg" alt="ニキシー管時計5" title="ニキシー管時計5">
+    </p>
+
+  </div>
+
+
+
+   <div onclick="obj=document.getElementById('nixie_open_niconico').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>ニコニコ動画</h4></a>
+  </div>
+    <div id="nixie_open_niconico" style="display:none;clear:both;">
+
    紹介動画はこちらです。
    <div class="pc">
    <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm37801550/script?w=640&h=360"></script>
@@ -125,7 +148,12 @@
     <a href="https://www.nicovideo.jp/watch/sm37801577">【ニキシー管】リレーデコーダ式ニキシー管時計10分版</a>
   </noscript>
 
-  <h4>YouTube</h4>
+</div>
+
+<div onclick="obj=document.getElementById('nixie_open_youtube').style; obj.display=(obj.display=='none')?'block':'none';">
+  <a style="cursor:pointer;"><h4>YouTube</h4></a>
+</div>
+  <div id="nixie_open_youtube" style="display:none;clear:both;">
   紹介動画はこちらです。<br>
   <div class="pc">
   <iframe width="640" height="380" src="https://www.youtube.com/embed/xO3bj8Syb4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
@@ -138,12 +166,31 @@
   <iframe width="320" height="180" src="https://www.youtube.com/embed/eTq6vmdRxOs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   </div>
 
+</div>
+
 <div onclick="obj=document.getElementById('denkou_open').style; obj.display=(obj.display=='none')?'block':'none';">
   <a style="cursor:pointer;"><h3 id="denkou">Bluetooth対応電光掲示板</h3></a>
 </div>
   <div id="denkou_open" style="display:none;clear:both;">
   
-    <h4>YouTube</h4>
+    <p>
+      Bluetooth接続が可能なESP32-WROOM-32を利用して電光掲示板を制御しました。<br>
+   </p>
+
+    <div onclick="obj=document.getElementById('denkou_open_youtube').style; obj.display=(obj.display=='none')?'block':'none';">
+      <a style="cursor:pointer;"><h4>YouTube</h4></a>
+    </div>
+      <div id="denkou_open_youtube" style="display:none;clear:both;">
+      紹介、解説動画はこちらです。<br>
+      <div class="pc">
+      <iframe width="640" height="380" src="https://www.youtube.com/embed/IW4t-pMx2No" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="sp">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/IW4t-pMx2No" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+    
+    </div>
     
   </div>
 
@@ -151,8 +198,12 @@
   <a style="cursor:pointer;"><h3 id="keybord">ショートカットキーボード</h3></a>
 </div>
   <div id="keybord_open" style="display:none;clear:both;">
-    
-    ここにせつめいdayo
+
+    <p>
+      REVIVE-USBのクローンを自作してPCと接続が可能なキーボードを作りました。<br>
+      ロータリーエンコーダを用いて回転が可能なつまみを実装しました。<br>
+      キートップと外枠はFusion360で設計し、3Dプリンタで出力しました。
+   </p>
       
   </div>
 
@@ -192,7 +243,7 @@
       
   </div>
 
-  </div>
+ 
     
 </main>
 
