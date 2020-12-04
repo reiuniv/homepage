@@ -177,6 +177,20 @@
       Bluetooth接続が可能なESP32-WROOM-32を利用して電光掲示板を制御しました。<br>
    </p>
 
+   <div onclick="obj=document.getElementById('denkou_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>写真</h4></a>
+  </div>
+    <div id="denkou_open_image" style="display:none;clear:both;">
+  
+      <p class="picture">
+        <img src="pic/denkou1.jpg" alt="電光掲示板1" title="電光掲示板1">
+       <img src="pic/denkou2.jpg" alt="電光掲示板2" title="電光掲示板2">
+      </p>
+  
+    </div>
+
+    
+
     <div onclick="obj=document.getElementById('denkou_open_youtube').style; obj.display=(obj.display=='none')?'block':'none';">
       <a style="cursor:pointer;"><h4>YouTube</h4></a>
     </div>
@@ -192,7 +206,7 @@
     
     </div>
     
-  </div>
+  
 
 <div onclick="obj=document.getElementById('keybord_open').style; obj.display=(obj.display=='none')?'block':'none';">
   <a style="cursor:pointer;"><h3 id="keybord">ショートカットキーボード</h3></a>
@@ -204,6 +218,17 @@
       ロータリーエンコーダを用いて回転が可能なつまみを実装しました。<br>
       キートップと外枠はFusion360で設計し、3Dプリンタで出力しました。
    </p>
+
+   <div onclick="obj=document.getElementById('keybord_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>写真</h4></a>
+  </div>
+    <div id="keybord_open_image" style="display:none;clear:both;">
+  
+      <p class="picture">
+        <img src="pic/keybord1.jpg" alt="ショートカットキーボード1" title="ショートカットキーボード1">
+      </p>
+  
+    </div>
       
   </div>
 
@@ -212,7 +237,24 @@
 </div>
   <div id="sdvx_open" style="display:none;clear:both;">
     
-    ここにせつめいdayo
+    <p>
+      SOUND VOLTEXという音ゲーのコントローラを自作しました。<br>
+      制御はREVIVE USBを使用しています。<br>
+      ボタンは三和ボタン、つまみはロータリーエンコーダを使用しています。<br>
+   </p>
+
+   <div onclick="obj=document.getElementById('sdvx_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>写真</h4></a>
+  </div>
+    <div id="sdvx_open_image" style="display:none;clear:both;">
+  
+      <p class="picture">
+        <img src="pic/sdvx1.jpg" alt="SDVXコントローラ1" title="SDVXコントローラ1">
+        <img src="pic/sdvx2.jpg" alt="SDVXコントローラ2" title="SDVXコントローラ2">
+        <img src="pic/sdvx3.jpg" alt="SDVXコントローラ3" title="SDVXコントローラ3">
+    </p>
+  
+    </div>
       
   </div>
 
@@ -221,7 +263,22 @@
 </div>
   <div id="timer_open" style="display:none;clear:both;">
     
-    ここにせつめいdayo
+    <p>
+      PIC16F1939を使ってタイマーを作りました。電子工作一作目。<br>
+      LCDが電力バカ食いなので秒で電池切れます。<br>
+   </p>
+
+   <div onclick="obj=document.getElementById('timer_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>写真</h4></a>
+  </div>
+    <div id="timer_open_image" style="display:none;clear:both;">
+  
+      <p class="picture">
+        <img src="pic/timer1.jpg" alt="ラーメンタイマー1" title="ラーメンタイマー1">
+        <img src="pic/timer2.jpg" alt="ラーメンタイマー2" title="ラーメンタイマー2">
+    </p>
+  
+    </div>
       
   </div>
 
@@ -230,7 +287,25 @@
 </div>
   <div id="minitimer_open" style="display:none;clear:both;">
     
-    ここにせつめいdayo
+    <p>
+      部活の電子工作教室のために作成しました。<br>
+      電子工作初心者でも作りやすいように細かい部品を使わずに、できるだけはんだ付けの箇所が少なくなるように設計しました。<br>
+      4つのボタンでタイマーの秒数を設定、スタート、ストップ、リセットができるようにしました。<br>
+      バーLEDを用いることで省スペース化をしました。バーの1本が30秒で対応しています。
+   </p>
+
+   <div onclick="obj=document.getElementById('minitimer_open_image').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>写真</h4></a>
+  </div>
+    <div id="minitimer_open_image" style="display:none;clear:both;">
+  
+      <p class="picture">
+        <img src="pic/minitimer1.jpg" alt="Miniラーメンタイマー1" title="Miniラーメンタイマー1">
+        <img src="pic/minitimer2.jpg" alt="Miniラーメンタイマー2" title="Miniラーメンタイマー2">
+        <img src="pic/minitimer3.jpg" alt="Miniラーメンタイマー3" title="Miniラーメンタイマー3">
+    </p>
+  
+    </div>
       
   </div>
 
@@ -239,10 +314,52 @@
 </div>
   <div id="others_open" style="display:none;clear:both;">
     
-    ここにせつめいdayo
+    <p>
+      細々とした作品や3Dプリンタで出力した小物などです。
+   </p>
+
+   <div onclick="obj=document.getElementById('rakutan_open').style; obj.display=(obj.display=='none')?'block':'none';">
+    <a style="cursor:pointer;"><h4>落単タイマー</h4></a>
+  </div>
+    <div id="rakutan_open" style="display:none;clear:both;">
+
+      <p>
+        落とした単位数を表示することで自己を戒めます。<br>
+        数値の変更は上部のDIPスイッチで各セグメントごとに点灯/消灯を切り替えて設定します。
+     </p>
+  
+      <p class="picture">
+        <img src="pic/rakutan1.jpg" alt="落単カウンター1" title="落単カウンター1">
+        <img src="pic/rakutan2.jpg" alt="落単カウンター2" title="落単カウンター2">
+        <img src="pic/rakutan3.jpg" alt="落単カウンター3" title="落単カウンター3">
+    </p>
+  
+    </div>
       
+    <div onclick="obj=document.getElementById('3d_open').style; obj.display=(obj.display=='none')?'block':'none';">
+      <a style="cursor:pointer;"><h4>3Dプリンタで作ったもの</h4></a>
+    </div>
+      <div id="3d_open" style="display:none;clear:both;">
+  
+        <p>
+          深さを変えることで醤油の濃さを変え、絵を表現する醤油皿<br>
+          リングフィットのコントローラをかけるやつ<br>
+          机にティッシュを掛けてスペースの削減化を図ったティッシュホルダー<br>
+        </p>
+    
+        <p class="picture">
+          <img src="pic/3d1.jpg" alt="3Dプリンター1" title="3Dプリンター1">
+          <img src="pic/3d2.jpg" alt="3Dプリンター2" title="3Dプリンター2">
+          <img src="pic/3d3.jpg" alt="3Dプリンター3" title="3Dプリンター3">
+          <img src="pic/3d4.jpg" alt="3Dプリンター4" title="3Dプリンター4">
+          <img src="pic/3d5.jpg" alt="3Dプリンター5" title="3Dプリンター5">
+      </p>
+    
+      </div>
+
   </div>
 
+</div>
  
     
 </main>
