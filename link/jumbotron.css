@@ -9,27 +9,6 @@ body {
   background-size:  cover; 
   background-position: center;
 }
-
-.pc { display: block !important; }
-.sp { display: none !important; }
-
-p.picture img {
-  max-width: 350px;
-  min-width: 200px;
-  width:100%;
-  margin:0.1rem;
-}
-
-.product h4{
-  border-left: 3px solid #b13e2170;
-  background: #faf3f2;/*背景色*/
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top:1rem;
-}
-
-
 @media screen and (min-width:1024px) {
 .jumbotron .container{
   width:20vw;
@@ -40,6 +19,15 @@ p.picture img {
 .jumbotron .container{
   border:  solid 1px;
   background:rgba(255,255,255,0.9);
+}
+
+p.icon,p.mail{
+  font-size: 1.5rem;
+}
+
+p.icon img{
+  width:5rem;
+  height:5rem;
 }
 
 .midashi h2{
@@ -59,14 +47,6 @@ main h1,.col-md-4 h4{
   margin-top:1rem;
 }
 
-main h3{
-  border-left: 3px solid #21b15d;
-  background: #e0fadd;/*背景色*/
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top:1rem;
-}
 
 .midashi .col-md-4{
     background: #f3f1f1;
@@ -100,11 +80,6 @@ a.btn.btn-secondary{
  hr.side{
   border: 2px double #8c8b8b;
  }
-
- @media only screen and (max-width: 480px) {
-  .pc { display: none !important; }
-  .sp { display: block !important; }
-}
   
  @media screen and (max-width: 480px) {
   .wrapper {
@@ -121,5 +96,4 @@ a.btn.btn-secondary{
     line-height: 1.5em;
    width: 100%;
   }
-
  }
