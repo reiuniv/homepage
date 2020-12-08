@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="test.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ブログ作るマン</title>
+</head>
+<body>
+    <h2>ブログ作るマン</h2>
+    ぶろぐをつくるよ
+    <hr>
+    <p>
+    <div class="left">
+    <dt>タイトル</dt>
+    <dd><input type="text" id="title" value=""></dd>
+    <dt>ブログのID</dt>
+    <dd><input type="text" id="blog_id" value=""></dd>
+    <dt>カテゴリ</dt>
+    <dd><select id="category" name="category">
+        <option>電子工作</option>
+        <option>HTML</option>
+        <option>その他</option>
+       </select>
+    </dd>
+    </p>
+
+    <input type="button" onclick="addText_url()" value="URL">
+    <input type="button" onclick="showradio()" value=" 出力 ">
+    <form name="output">
+    <div class="right">
+    <textarea name="textbox_write" id="writetext">本文</textarea>
+    <textarea name="textbox" id="outtext">出力</textarea>
+</div>
+    </form>
+</body>
+</html>
