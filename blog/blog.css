@@ -24,6 +24,9 @@ p.picture img {
   margin:0.1rem;
 }
 
+.url-link{
+  word-break: break-all;
+}
 
 main h3{
   border-left: 3px solid #21b15d;
@@ -128,7 +131,4 @@ a.btn.btn-secondary{
    width: 100%;
   }
 
-  #honbun{
-    width:100%;
-  }
  }
