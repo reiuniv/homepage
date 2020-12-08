@@ -9,11 +9,6 @@ body {
   background-size:  cover; 
   background-position: center;
 }
-
-.blog a{
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-}
 @media screen and (min-width:1024px) {
 .jumbotron .container{
   width:20vw;
@@ -28,6 +23,7 @@ p.picture img {
   width:100%;
   margin:0.1rem;
 }
+
 
 main h3{
   border-left: 3px solid #21b15d;

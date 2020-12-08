@@ -14,7 +14,6 @@ function addText_url(){
 
   function showradio() {
     var title = document.getElementById("title").value;
-    var blog_id = document.getElementById("blog_id").value;
     var category = document.getElementById("category").value;
     var writetext = document.getElementById("writetext").value;
     var dt = new Date();
@@ -27,7 +26,7 @@ function addText_url(){
         //console.log(out);
        writetext = writetext.replace(/\r?\n/g, '<br>'+'\n\t');
 
-    out+="<div class=\"title\">\n<h3 id=\""+blog_id+"\">"+title+"</h3><!--ブログのタイトル-->\n</div>\n"
+    out+="<div id=\"title\">\n<h3>"+title+"</h3><!--ブログのタイトル-->\n</div>\n"
             +"<div id=\"honbun\"><!--ここから本文-->\n\t"
             +writetext+"\n"
             +"</div>\n"
