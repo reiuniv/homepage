@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>バーコード作るマン</title>
+    <script src="barcodegen.js"></script>
+    <link rel="stylesheet" href="barcodegen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/9.0.0/decimal.min.js"></script>
+  </head>
+  <body>
+    <h1 id="url">バーコード作るマン</h1>
+
+    <div id="maegaki">
+        バーコードいっぱい作るマンです<br>
+        チェックデジットの自動計算を有効にすると最終桁が上書きされます。
+      </div>
+      <label>JANコード：<input type="text" size="40" id="jancode" value="1234567890123"></label>
+      <br>
+      <input type="checkbox" id="checkdigit" name="checkdigit" checked />
+      <label for="checkdigit">チェックデジットの自動計算</label>
+      <input type="checkbox" id="hozyo" name="checkdigit" />
+      <label for="hozyo">補助線　</label>
+      <label>補助線の幅[%]：<input type="text" size="3" id="hozyohaba" value="100"></label>
+    <br>
+    <label>倍率：<input type="text" size="2" id="bairitu" value="10"></label>
+    <label>フォントサイズ：<input type="text" size="2" id="fontsize" value="3.8"></label><br>
+    <label>余白x：<input type="text" size="2" id="yohaku_x" value="0"></label>
+    <label>余白y：<input type="text" size="2" id="yohaku_y" value="1"></label><br>
+    <label>フォントとの間隔：<input type="text" size="2" id="fontkankaku" value="3.5"></label><br>
+    <label>幅[%]：<input type="text" size="3" id="haba" value="100"></label>
+    <label>高さ[%]：<input type="text" size="3" id="takasa" value="100"></label><br>
+    <label>ガードの色：<input type="text" size="4" id="gadocolor" value="#000000"></label><br>
+    <label>数字部分の色：<input type="text" size="4" id="suuzicolor" value="#000000"></label><br>
+    <label>補助線の色：<input type="text" size="4" id="hozyocolor" value="#444499"></label><br>
+    <label>補助線の区切りの色：<input type="text" size="4" id="kugiricolor" value="#ff7777"></label><br>
+    <label>下の数字の色：<input type="text" size="4" id="numcolor" value="#000000"></label><br>
+    <input type="checkbox" id="kugiri" name="checkdigit" checked />
+      <label for="kugiri">補助線の区切り色変え</label><br>
+    <label><input type="radio" name="codetype" value="EAN13" checked>EAN13</label>
+    <label><input type="radio" name="codetype" value="EAN8" >EAN8</label>
+    <br>
+
+      <input id="genbtn" type="button" value="生成" onclick="genbtn()">
+      <div id="errortxt"></div>
+
+      <form id="form">
+        <input id="input" placeholder="ファイル名を入力" value="" />
+      </form>
+      <input id="svgdown" type="button" value="svgで保存" onclick="svgdown()">
+      <br><div id="jancodetxt"></div><br>
+      <svg id="svgField" width="60" height="60"></svg>
+
+    </body>
+</html>
