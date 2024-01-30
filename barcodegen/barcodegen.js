@@ -117,6 +117,9 @@ console.log(codetype_elements[0].checked);
 let hozyo_element = document.getElementById('hozyo');
 console.log(hozyo_element.checked);
 
+let book_element = document.getElementById('book');
+console.log(book_element.checked);
+
 let hozyo_haba_element = document.getElementById('hozyohaba');
 console.log(hozyo_haba_element.value);
 
@@ -204,7 +207,11 @@ let wakucolor = hozyo_color_element.value;
 let kugiricolor = kugiri_color_element.value;
 let numcolor = num_color_element.value;
 
+var gardbar = 1.65;
 
+if(book_element.checked){
+    gardbar=0;
+}
 
 if(EAN13){
     width_buf = 3.63;
@@ -284,7 +291,7 @@ for(let i=0;i<2;i++){
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     point_x += 0.66*i*bairitu*haba/100;
     var width = 0.33*bairitu*haba/100;
-    var height = (height_buf*takasa/100+1.65) * bairitu;
+    var height = (height_buf*takasa/100+gardbar) * bairitu;
 
 
 rect.setAttribute( 'x', point_x);
@@ -360,7 +367,7 @@ for(let i=0;i<2;i++){
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     point_x +=0.66*i*bairitu*haba/100;
     var width = 0.33*bairitu*haba/100;
-    var height = (height_buf*takasa/100+1.65) * bairitu;
+    var height = (height_buf*takasa/100+gardbar) * bairitu;
 
 rect.setAttribute( 'x', point_x);
 rect.setAttribute( 'y', point_y);
@@ -435,7 +442,7 @@ for(let i=0;i<2;i++){
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     point_x +=0.66*i*bairitu*haba/100;
     var width = 0.33*bairitu*haba/100;
-    var height = (height_buf*takasa/100+1.65) * bairitu;
+    var height = (height_buf*takasa/100+gardbar) * bairitu;
     Math.round(point_x * 1000) / 1000;
     Math.round(width * 1000) / 1000;
     Math.round(height * 1000) / 1000;
@@ -582,6 +589,23 @@ for(let i=0;i<2;i++){
             }
         }
 if(EAN13){
+    if(book_element.checked){
+        console.log("ean13 text");
+var jancode_full = jancode.substring( 0, 13 );
+console.log( jancode_front );
+console.log( point_y+(height_buf*takasa/100) * bairitu );
+var textobj = document.createTextNode(jancode_full);
+var textele = document.createElementNS("http://www.w3.org/2000/svg", "text");
+textele.appendChild(textobj);
+textele.setAttributeNS(null, "x", quiet+(width_buf*haba/100)*bairitu);
+textele.setAttributeNS(null, "y", point_y+(height_buf*takasa/100) * bairitu+fontkankaku* bairitu);
+textele.setAttributeNS(null, "textLength", 31 *bairitu*haba/100);
+textele.setAttributeNS(null, "font-family", "OCRB","Arial");
+textele.setAttributeNS(null, "font-size", fontsize*bairitu);
+textele.setAttributeNS(null, "lengthAdjust", "spacing");
+textele.setAttributeNS(null, "fill", numcolor);
+svg1.appendChild(textele);
+    }else{
     console.log("ean13 text");
 var jancode_front = jancode.substring( 1, 7 );
 var jancode_back = jancode.substring( 7, 13 );
@@ -620,7 +644,7 @@ textele.setAttributeNS(null, "font-size", fontsize*bairitu);
 textele.setAttributeNS(null, "lengthAdjust", "spacing");
 textele.setAttributeNS(null, "fill", numcolor);
 svg1.appendChild(textele);
-
+}
 }else{
     console.log("ean8 text");
     var jancode_front = jancode.substring( 0, 4 );
