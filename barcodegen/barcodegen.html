@@ -37,6 +37,8 @@
     <label>補助線の色：<input type="text" size="4" id="hozyocolor" value="#a9ceec"></label><br>
     <label>補助線の区切りの色：<input type="text" size="4" id="kugiricolor" value="#990000"></label><br>
     <label>下の数字の色：<input type="text" size="4" id="numcolor" value="#000000"></label><br>
+    <input type="checkbox" id="suuzikesu" name="checkdigit"  checked/>
+    <label for="suuzikesu">数字の表示</label><br>
     <input type="checkbox" id="kugiri" name="checkdigit" checked />
       <label for="kugiri">補助線の区切り色変え</label><br>
     <label><input type="radio" name="codetype" value="EAN13" checked>EAN13</label>
@@ -50,6 +52,10 @@
         <input id="input" placeholder="ファイル名を入力" value="" />
       </form>
       <input id="svgdown" type="button" value="svgで保存" onclick="svgdown()">
+      <input id="pngdown" type="button" value="pngで保存" onclick="pngdown()">
+      <label>pngの解像度：<input type="text" size="2" id="kaizoudo" value="10"></label>
+      <input type="checkbox" id="touka" name="touka" />
+      <label for="touka">背景の透過</label>
       <br><div id="jancodetxt"></div><br>
       <svg id="svgField" width="60" height="60"></svg>
 

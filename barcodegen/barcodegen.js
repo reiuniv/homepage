@@ -162,6 +162,13 @@ console.log(num_color_element.value);
 let kugiri_element = document.getElementById('kugiri');
 console.log(kugiri_element.checked);
 
+let touka_element = document.getElementById('touka');
+console.log(touka_element.checked);
+
+let suuzikesu_element = document.getElementById('suuzikesu');
+console.log(suuzikesu_element.checked);
+
+
 console.log("---------------------------------------");
 
 var errortxt= document.getElementById("errortxt");  
@@ -270,7 +277,14 @@ if(EAN13){
     var barcode = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 svg1.setAttribute("width",width_all);
 svg1.setAttribute("height",height_all);
-svg1.style.backgroundColor = "white";
+if(touka_element.checked){
+    svg1.style.backgroundColor = "transparent";
+    console.log("透過したよ");
+}else{
+    svg1.style.backgroundColor = "white";
+    console.log("透過してないよ");
+}
+//svg1.style.backgroundColor = "white";
 
 svg1.appendChild(barcode);
 }else{
@@ -279,9 +293,17 @@ svg1.appendChild(barcode);
     var barcode = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 svg1.setAttribute("width",width_all);
 svg1.setAttribute("height",height_all);
-svg1.style.backgroundColor = "white";
+if(touka_element.checked){
+    svg1.style.backgroundColor = "transparent";
+    console.log("透過したよ");
+}else{
+    svg1.style.backgroundColor = "white";
+    console.log("透過してないよ");
+}
 
-svg1.appendChild(barcode);}
+svg1.appendChild(barcode);
+
+}
 
 
 var point_x= width_buf*bairitu;
@@ -588,6 +610,8 @@ for(let i=0;i<2;i++){
                 svg1.appendChild(line);
             }
         }
+if(suuzikesu_element.checked){
+
 if(EAN13){
     if(book_element.checked){
         console.log("ean13 text");
@@ -675,7 +699,7 @@ svg1.appendChild(textele);
     textele.setAttributeNS(null, "fill", numcolor);
     svg1.appendChild(textele);
 }
-
+}
 var jancodetxt= document.getElementById("jancodetxt");  
 jancodetxt.innerHTML= jancode;  
 }
@@ -702,6 +726,31 @@ downloadSvg(svg, `${input.value}.svg`);
 }
 }
 
+function pngdown(){
+
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    const svg = document.getElementById('svgField');
+    let kaizoudo_element = document.getElementById('kaizoudo');
+    console.log(kaizoudo_element.value);
+    let kaizoudo = kaizoudo_element.value;
+    
+    var jancodetxt= document.getElementById("jancodetxt");  
+    console.log(jancodetxt);
+    console.log(jancodetxt.textContent);
+    
+    if(input.value==""){
+        let codetype_elements = document.getElementsByName('codetype');
+        if(codetype_elements[0].checked){
+            downloadPng(svg, "EAN13-"+jancodetxt.textContent+`.png`,kaizoudo);
+        }else{
+            downloadPng(svg, "EAN8-"+jancodetxt.textContent+`.png`,kaizoudo);
+        }
+    }else{
+    downloadPng(svg, `${input.value}.png`,kaizoudo);
+    }
+    }
+
 function downloadSvg(svgNode, filename) {
     const svgText = new XMLSerializer().serializeToString(svgNode);
     const svgBlob = new Blob([svgText], { type: 'image/svg+xml' });
@@ -716,4 +765,39 @@ function downloadSvg(svgNode, filename) {
   
     document.body.removeChild(a);
     URL.revokeObjectURL(svgUrl);
+  }
+
+  function downloadPng(svgNode, filename, scale) {
+    const svgText = new XMLSerializer().serializeToString(svgNode);
+
+    // SVGノードから幅と高さを取得
+    const svgWidth = svgNode.clientWidth || svgNode.viewBox.baseVal.width;
+    const svgHeight = svgNode.clientHeight || svgNode.viewBox.baseVal.height;
+
+    const svgBlob = new Blob([svgText], { type: 'image/svg+xml' });
+    const svgUrl = URL.createObjectURL(svgBlob);
+
+    var canvas = document.createElement("canvas");
+    // SVGのサイズに基づいてキャンバスのサイズを設定し、解像度を上げる
+    canvas.width = svgWidth * scale;
+    canvas.height = svgHeight * scale;
+
+    var ctx = canvas.getContext("2d");
+
+        // キャンバスの背景を透過に設定
+        ctx.fillStyle = "rgba(0, 0, 0, 0)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // キャンバスに描画する際のスケールを調整
+    ctx.scale(scale, scale);
+
+    var image = new Image();
+    image.onload = function(){
+        ctx.drawImage(image, 0, 0);
+        var a = document.createElement("a");
+        a.href = canvas.toDataURL("image/png");
+        a.setAttribute("download", filename || "image.png");
+        a.dispatchEvent(new MouseEvent("click"));
+    }
+    image.src = "data:image/svg+xml;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(svgText))); 
   }
